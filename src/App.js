@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <LandingPage scroll={isFormOpen} openFormModal={setIsFormOpen}/>
-      { isFormOpen && <Form />}
+      { isFormOpen && <Form setIsFormOpen={setIsFormOpen} />}
       <Toaster position="top-right" reverseOrder={false} />
     </>
   );

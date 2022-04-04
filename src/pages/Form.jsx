@@ -14,7 +14,7 @@ import {
 } from "../Utils/Validators";
 import EducationSection from "../components/EducationSection";
 
-const Form = () => {
+const Form = ({ setIsFormOpen }) => {
   const [userData, setUserData] = useState({
     address: "",
     clinic: "",
@@ -39,12 +39,14 @@ const Form = () => {
 
   const submitHandler = () => {
     if (submitValidation(userData)) {
+      setIsFormOpen(false);
       console.log(userData);
     }
   };
 
   const submitHandlerForMobile = () => {
     if (mobileSubmitValidation(userData)) {
+      setIsFormOpen(false);
       console.log(userData);
     }
   };
