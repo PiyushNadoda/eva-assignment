@@ -1,0 +1,57 @@
+.container,
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.span {
+  grid-column: span 2;
+}
+
+.input-wrapper {
+  margin-top: 8px;
+  padding: 10px 20px;
+  display: flex;
+  width: 100%;
+  border: 1px solid #5252527a;
+}
+
+.disabled {
+  opacity: 0.8;
+}
+
+.dropdown {
+  margin-top: 8px;
+}
+
+.input-wrapper *:not(:last-child) {
+  padding-right: 10px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-weight: 300;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.error {
+  font-weight: 500;
+  color: #ff0a0a;
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    height: 90px;
+  }
+
+  .container.show {
+    display: flex;
+  }
+
+  .container.hide {
+    display: none;
+  }
+}
