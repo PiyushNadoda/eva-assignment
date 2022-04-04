@@ -64,7 +64,6 @@ export const submitValidation = (data) => {
     data?.education &&
     data?.["mobile-number"] &&
     data?.experience &&
-    data?.["work-experience"] &&
     data?.clinic &&
     data?.education.length >= 2
   ) {
